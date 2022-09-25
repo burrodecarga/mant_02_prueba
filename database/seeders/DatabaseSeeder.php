@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+
 use App\User;
 use App\Tipo;
 use App\Subsistema;

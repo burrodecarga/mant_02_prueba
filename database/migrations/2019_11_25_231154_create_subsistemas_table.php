@@ -15,10 +15,14 @@ class CreateSubsistemasTable extends Migration
     {
         Schema::create('subsistemas', function (Blueprint $table) {
             $table->bigIncrements('id');
+$table->string('sistema')->nullable();
+
             $table->bigInteger('sistema_id')->unsigned()->default(1);
             $table->string('name');
             $table->longText('description')->nullable();
             $table->string('slug');
+$table->string('validador')->nullable();
+
             $table->timestamps();
 
             $table->foreign('sistema_id')->references('id')->on('sistemas')
